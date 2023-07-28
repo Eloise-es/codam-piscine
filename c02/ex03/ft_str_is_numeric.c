@@ -6,11 +6,11 @@
 /*   By: esalmon <esalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 20:32:34 by esalmon           #+#    #+#             */
-/*   Updated: 2023/07/15 20:41:33 by esalmon          ###   ########.fr       */
+/*   Updated: 2023/07/20 13:49:43 by esalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int	count_true;
 	int	length;
@@ -44,13 +44,13 @@ int	main(void)
 	char	str4[] = "hello12345";
 	int	result;
 
-	result = ft_str_is_alpha(str1);
+	result = ft_str_is_numeric(str1);
 	printf("String = %s\nResult = %d\n", str1, result);
-	result = ft_str_is_alpha(str2);
+	result = ft_str_is_numeric(str2);
 	printf("String = %s\nResult = %d\n", str2, result);
-	result = ft_str_is_alpha(str3);
+	result = ft_str_is_numeric(str3);
 	printf("String = %s\nResult = %d\n", str3, result);
-	result = ft_str_is_alpha(str4);
+	result = ft_str_is_numeric(str4);
 	printf("String = %s\nResult = %d\n", str4, result);
 
 }

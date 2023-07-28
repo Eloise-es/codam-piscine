@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esalmon <esalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 20:15:18 by esalmon           #+#    #+#             */
-/*   Updated: 2023/07/18 07:49:55 by esalmon          ###   ########.fr       */
+/*   Created: 2023/07/18 07:35:37 by esalmon           #+#    #+#             */
+/*   Updated: 2023/07/18 07:39:38 by esalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int	count_true;
 	int	length;
@@ -20,10 +20,6 @@ int	ft_str_is_alpha(char *str)
 	while (*str != '\0')
 	{
 		if (*str >= 'a' && *str <= 'z')
-		{
-			count_true++;
-		}
-		if (*str >= 'A' && *str <= 'Z')
 		{
 			count_true++;
 		}
@@ -46,18 +42,18 @@ int	main(void)
 	char	str2[] = "hello";
 	char	str3[] = "12345";
 	char	str4[] = "hello12345";
-	char	str5[] = "Hello";
+	char	str5[] = "hello 12345";
 	int	result;
 
-	result = ft_str_is_alpha(str1);
+	result = ft_str_is_lowercase(str1);
 	printf("String = %s\nResult = %d\n", str1, result);
-	result = ft_str_is_alpha(str2);
+	result = ft_str_is_lowercase(str2);
 	printf("String = %s\nResult = %d\n", str2, result);
-	result = ft_str_is_alpha(str3);
+	result = ft_str_is_lowercase(str3);
 	printf("String = %s\nResult = %d\n", str3, result);
-	result = ft_str_is_alpha(str4);
+	result = ft_str_is_lowercase(str4);
 	printf("String = %s\nResult = %d\n", str4, result);
-	result = ft_str_is_alpha(str5);
+	result = ft_str_is_lowercase(str5);
 	printf("String = %s\nResult = %d\n", str5, result);
 
 }
