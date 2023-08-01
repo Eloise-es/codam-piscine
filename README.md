@@ -10,6 +10,9 @@ Projects completed while learning C during the 4 week Piscine at Codam College i
 - C03: Comparing and concatinating strings
 - C04: Dealing with numbers (atoi)
 - C05: Recursivity
+- C06: Command line arguments
+- C07: Algorithms (using malloc)
+- C08: Headers
 
 
 ## 🛠 Built with...
