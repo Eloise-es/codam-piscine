@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esalmon <esalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 17:22:06 by esalmon           #+#    #+#             */
-/*   Updated: 2023/08/01 14:12:04 by esalmon          ###   ########.fr       */
+/*   Created: 2023/08/01 15:17:07 by esalmon           #+#    #+#             */
+/*   Updated: 2023/08/01 17:43:25 by esalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_fibonacci(int index)
 {
-	int	factorial;
-	int	i;
+	int	sign;
 
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
-	i = 1;
-	factorial = nb;
-	while (i < nb)
+	sign = 1;
+	if (index < 0)
 	{
-		factorial = factorial * (nb - i);
-		i++;
+		sign = -1;
+		index *= -1;
 	}
-	return (factorial);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	return (sign * ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 
 /*
@@ -42,6 +40,6 @@ int	main(int argc, char *argv[])
 	}
 	else nb = 5;
 	
-	printf("\n\nNumber = %d	Factorial = %d\n\n", nb, ft_iterative_factorial(nb));
+	printf("\nNumber = %d	Fibonacci = %d\n\n", nb, ft_fibonacci(nb));
 }
 */

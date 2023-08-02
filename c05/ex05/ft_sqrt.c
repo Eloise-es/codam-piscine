@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esalmon <esalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 17:22:06 by esalmon           #+#    #+#             */
-/*   Updated: 2023/08/01 14:12:04 by esalmon          ###   ########.fr       */
+/*   Created: 2023/08/01 16:26:35 by esalmon           #+#    #+#             */
+/*   Updated: 2023/08/01 17:44:03 by esalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_sqrt(int nb)
 {
-	int	factorial;
 	int	i;
+	int	sq;
 
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
 	i = 1;
-	factorial = nb;
-	while (i < nb)
-	{
-		factorial = factorial * (nb - i);
+	sq = 1;
+	if (nb <= 0 || nb == 2)
+		return (0);
+	while (i * i < nb)
 		i++;
-	}
-	return (factorial);
+	if ((nb % i) == 0)
+		return (i);
+	else
+		return (0);
 }
 
 /*
@@ -40,8 +38,8 @@ int	main(int argc, char *argv[])
 	{
 		nb = atoi(argv[1]);
 	}
-	else nb = 5;
+	else nb = 9;
 	
-	printf("\n\nNumber = %d	Factorial = %d\n\n", nb, ft_iterative_factorial(nb));
+	printf("\nNumber = %d	Square root = %d\n\n", nb, ft_sqrt(nb));
 }
 */

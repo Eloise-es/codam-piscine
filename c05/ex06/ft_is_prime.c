@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esalmon <esalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 17:22:06 by esalmon           #+#    #+#             */
-/*   Updated: 2023/08/01 14:12:04 by esalmon          ###   ########.fr       */
+/*   Created: 2023/08/01 17:45:25 by esalmon           #+#    #+#             */
+/*   Updated: 2023/08/01 17:49:58 by esalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_is_prime(int nb)
 {
-	int	factorial;
 	int	i;
 
-	if (nb < 0)
+	i = 2;
+	if (nb <= 1)
 		return (0);
-	if (nb == 0)
-		return (1);
-	i = 1;
-	factorial = nb;
 	while (i < nb)
 	{
-		factorial = factorial * (nb - i);
+		if ((nb % i) == 0)
+			return (0);
 		i++;
 	}
-	return (factorial);
+	return (1);
 }
 
 /*
@@ -40,8 +37,8 @@ int	main(int argc, char *argv[])
 	{
 		nb = atoi(argv[1]);
 	}
-	else nb = 5;
+	else nb = 9;
 	
-	printf("\n\nNumber = %d	Factorial = %d\n\n", nb, ft_iterative_factorial(nb));
+	printf("\nNumber = %d	Is prime? = %d\n\n", nb, ft_is_prime(nb));
 }
 */
