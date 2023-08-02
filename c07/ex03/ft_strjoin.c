@@ -6,7 +6,7 @@
 /*   By: esalmon <esalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 16:10:19 by esalmon           #+#    #+#             */
-/*   Updated: 2023/07/31 19:01:22 by esalmon          ###   ########.fr       */
+/*   Updated: 2023/08/01 15:53:35 by esalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,7 @@ char	*ft_concatinate(int size, char **strs, char *sep)
 
 	result = (char *)malloc(ft_total_length(size, strs, sep) + 1);
 	if (result == NULL)
-	{
-		printf("Memory not allocated");
 		return (NULL);
-	}
 	i = 0;
 	j = 0;
 	while (i < size)

@@ -6,7 +6,7 @@
 /*   By: esalmon <esalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:41 by esalmon           #+#    #+#             */
-/*   Updated: 2023/07/31 15:06:45 by esalmon          ###   ########.fr       */
+/*   Updated: 2023/07/31 19:03:22 by esalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int	main(void)
 	return (0);
 }
 */
+
 /*
 TASK
 	Create a function ft_range which returns an array of ints. 
